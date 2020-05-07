@@ -99,5 +99,14 @@ class GildedRoseTest {
         assertEquals( 8, app.items[0].quality);
     }
 
+    @Test
+    void shouldAddQualityTwiceForConjured() {
+        Item[] items = new Item[] {
+                new Item("Conjured", 10, 10)
+        };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals( 8, app.items[0].quality);
+    }
 
 }
