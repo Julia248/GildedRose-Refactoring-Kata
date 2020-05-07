@@ -111,7 +111,6 @@ class GildedRoseTest {
         assertEquals( 16, app.items[0].quality);
     }
 
-    @Disabled
     @Test
     void shouldAddQualityTwiceForConjured() {
         Item[] items = new Item[] {

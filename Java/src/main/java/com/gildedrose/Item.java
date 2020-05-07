@@ -27,6 +27,9 @@ public class Item {
             return new BackstagePasses(name, sellIn, quality);
         }
 
+        if (name == "Conjured") {
+            return new Conjured(name, sellIn, quality);
+        }
 
         return new Item(name, sellIn, quality);
     }
