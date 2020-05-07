@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -99,6 +100,7 @@ class GildedRoseTest {
         assertEquals( 8, app.items[0].quality);
     }
 
+    @Disabled
     @Test
     void shouldAddQualityTwiceForConjured() {
         Item[] items = new Item[] {
