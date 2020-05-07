@@ -11,7 +11,7 @@ class GildedRoseTest {
     @Test
     void shouldNeverNegativeQualityAnyProduct() {
         Item[] items = new Item[] {
-                new Item("Chocolate", 1, 1)
+                Item.getItemByType("Chocolate", 1, 1)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -22,7 +22,7 @@ class GildedRoseTest {
     @Test
     void shouldIncreaseQualityForAgedBrie() {
         Item[] items = new Item[] {
-                new Item("Aged Brie", 1, 1)
+                Item.getItemByType("Aged Brie", 1, 1)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -32,7 +32,7 @@ class GildedRoseTest {
     @Test
     void shouldNotIncreaseQualityAnyProductOver50() {
         Item[] items = new Item[] {
-                new Item("Aged Brie", 1, 50)
+                Item.getItemByType("Aged Brie", 1, 50)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -42,7 +42,7 @@ class GildedRoseTest {
     @Test
     void shouldNotDecreaseQualityOrSellSulfuras() {
         Item[] items = new Item[] {
-                new Item("Sulfuras, Hand of Ragnaros", 2, 80)
+                Item.getItemByType("Sulfuras, Hand of Ragnaros", 2, 80)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -53,7 +53,7 @@ class GildedRoseTest {
     @Test
     void shouldIncreaseBackstageQualityTwice() {
         Item[] items = new Item[] {
-                new Item("Backstage passes to a TAFKAL80ETC concert", 9, 10)
+                Item.getItemByType("Backstage passes to a TAFKAL80ETC concert", 9, 10)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -63,7 +63,7 @@ class GildedRoseTest {
     @Test
     void shouldIncreaseBackstageQualityOnce() {
         Item[] items = new Item[] {
-                new Item("Backstage passes to a TAFKAL80ETC concert", 11, 10)
+                Item.getItemByType("Backstage passes to a TAFKAL80ETC concert", 11, 10)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -73,7 +73,7 @@ class GildedRoseTest {
     @Test
     void shouldIncreaseBackstageQualityThree() {
         Item[] items = new Item[] {
-                new Item("Backstage passes to a TAFKAL80ETC concert", 5, 10)
+                Item.getItemByType("Backstage passes to a TAFKAL80ETC concert", 5, 10)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -83,7 +83,7 @@ class GildedRoseTest {
     @Test
     void shouldDropsToZeroBackstageQuality() {
         Item[] items = new Item[] {
-                new Item("Backstage passes to a TAFKAL80ETC concert", 0, 10)
+                Item.getItemByType("Backstage passes to a TAFKAL80ETC concert", 0, 10)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -93,7 +93,7 @@ class GildedRoseTest {
     @Test
     void shouldAnyProductDatePassedDecreaseQualityTwice() {
         Item[] items = new Item[] {
-                new Item("Cholocate", -1, 10)
+                Item.getItemByType("Cholocate", -1, 10)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -104,7 +104,7 @@ class GildedRoseTest {
     @Test
     void shouldAddQualityTwiceForConjured() {
         Item[] items = new Item[] {
-                new Item("Conjured", 10, 10)
+                Item.getItemByType("Conjured", 10, 10)
         };
         GildedRose app = new GildedRose(items);
         app.updateQuality();

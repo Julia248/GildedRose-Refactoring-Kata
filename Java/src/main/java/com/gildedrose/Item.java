@@ -14,6 +14,15 @@ public class Item {
         this.quality = quality;
     }
 
+    public static Item getItemByType(String name, int sellIn, int quality){
+        if (name == "Aged Brie") {
+            return new AgedBrie(name, sellIn, quality);
+        }
+        else {
+            return new Item(name, sellIn, quality);
+        }
+    }
+
     @Override
     public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
