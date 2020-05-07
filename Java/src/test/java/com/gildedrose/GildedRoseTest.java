@@ -102,6 +102,17 @@ class GildedRoseTest {
 
     @Disabled
     @Test
+    void shouldAddQualityOnceForBackstagePasses() {
+        Item[] items = new Item[] {
+                Item.getItemByType("Backstage passes to a TAFKAL80ETC concert", 14, 15)
+        };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals( 16, app.items[0].quality);
+    }
+
+    @Disabled
+    @Test
     void shouldAddQualityTwiceForConjured() {
         Item[] items = new Item[] {
                 Item.getItemByType("Conjured", 10, 10)
