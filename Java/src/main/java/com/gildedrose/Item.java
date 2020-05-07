@@ -18,9 +18,12 @@ public class Item {
         if (name == "Aged Brie") {
             return new AgedBrie(name, sellIn, quality);
         }
-        else {
-            return new Item(name, sellIn, quality);
+        
+        if (name == "Sulfuras, Hand of Ragnaros") {
+            return new Sulfuras(name, sellIn, quality);
         }
+
+        return new Item(name, sellIn, quality);
     }
 
     @Override
