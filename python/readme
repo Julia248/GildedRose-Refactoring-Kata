@@ -1,0 +1,5 @@
+pip install -r requirements.txt
+
+pip install rednose
+
+nosetests -s --cover-branches --with-coverage --rednose
