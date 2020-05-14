@@ -11,12 +11,21 @@ class GildedRoseTest {
     @Test
     void shouldNeverNegativeQualityAnyProduct() {
         Item[] items = new Item[] {
-                Item.getItemByType("Chocolate", 1, 1)
+                Item.getItemByType("Chocolate", 1, 1),
+                Item.getItemByType("Aged Brie", 1 ,1),
+                Item.getItemByType("Sulfuras, Hand of Ragnaros", 1, 1),
+                Item.getItemByType("Backstage passes to a TAFKAL80ETC concert", 1 ,1),
+                Item.getItemByType("Conjured", 1, 1),
         };
+
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         app.updateQuality();
         assertEquals(0, app.items[0].quality);
+        assertEquals(0, app.items[1].quality);
+        assertEquals(0, app.items[2].quality);
+        assertEquals(0, app.items[3].quality);
+        assertEquals(0, app.items[4].quality);
     }
 
     @Test
